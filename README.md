@@ -58,6 +58,7 @@ You can add thoses css parameters to customize your current titlebar:
     padding: 4px; /* default value */
 }
 ```
+Remember: if you want to change the titlebar's title, just change the page's title `<title>Page title</title>`, and it's dynamically updated!
 ## Documentation
 ~~[documentation page](https://github.com/Loxoz/EmitX/wiki)~~ (not avalible for the moment)
 

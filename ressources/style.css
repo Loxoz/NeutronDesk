@@ -169,3 +169,12 @@ body.fullscreen .app-content {
 .window-controls-container.anm .window-icon-bg {
     transition: all .1s;
 }
+
+/* Window size title support */
+@media only screen and (max-width: 300px) {
+    .app-titlebar .window-title {
+        position: relative;
+        left: unset;
+        transform: unset;
+    }
+}

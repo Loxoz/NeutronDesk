@@ -1,7 +1,7 @@
 {
     "name": "neutrondesk",
     "version": "1.0.0",
-    "description": "Customizable Windows 10 style for your Electrons Apps, Easy, Faster and Lightweight!",
+    "description": "Customizable Windows 10 style for your Electrons Apps, Easy, Fast and Lightweight!",
     "main": "index.js",
     "scripts": {
         "exemple": "electron exemple"

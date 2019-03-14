@@ -1,0 +1,159 @@
+/* blwindow default style */
+/* Default Theme */
+:root {
+    --titlebar-background-color: rgb(40, 44, 52); /* default: rgb(40, 44, 52) */
+    --titlebar-color-active: rgb(157, 165, 180); /* default: rgb(157, 165, 180) */
+    --titlebar-color-inactive: rgb(107, 113, 125); /* default: rgb(107, 113, 125) */
+    --titlebar-icon: url('../icon.svg'); /* default: url('../icon.svg') */
+    /* More */
+    --titlebar-font: -apple-system, BlinkMacSystemFont, Segoe WPC, Segoe UI, HelveticaNeue-Light, Ubuntu, Droid Sans, sans-serif;
+    --titlebar-font-size: 13px; /* default: 13px */
+    --titlebar-ctrl-hover-bg: hsla(0,0%,100%,.1); /* default: hsla(0,0%,100%,.1) */
+    --titlebar-ctrl-close-hover-bg: rgba(232,17,35,.9); /* default: rgba(232,17,35,.9) */
+    --titlebar-ctrl-close-hover-clr: #fff; /* default: #fff */
+}
+/*
+ * Note: if you want to edit the theme, it's recommended to copy the :root above and put in your style.css
+ *  (and put your style import after this one)
+*/
+
+body {
+    margin: 0 !important;
+    overflow: hidden;
+}
+
+/* App Title bar */
+.app-titlebar {
+    background-color: var(--titlebar-background-color);
+    color: var(--titlebar-color-active);
+    font-family: var(--titlebar-font);
+    width: 100vw;
+    height: 30px;
+    top: 0; left: 0;
+    display: flex;
+    user-select: none;
+    cursor: default;
+    line-height: 30px;
+    position: fixed;
+    font-size: var(--titlebar-font-size);
+    zoom: 1;
+    z-index: 99;
+}
+
+.app-titlebar.inactive {
+    color: var(--titlebar-color-inactive);
+}
+
+.app-titlebar .drag-region {
+    -webkit-app-region: drag;
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.app-titlebar .resizer {
+    -webkit-app-region: no-drag;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 4px;
+}
+
+.app-titlebar .window-appicon {
+    z-index: 100;
+    width: 35px;
+    height: 100%;
+    position: relative;
+    background-image: var(--titlebar-icon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
+.app-titlebar .window-menubar {
+    display: none;
+}
+
+.app-titlebar .window-title {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+
+/* App Title bar - controls */
+.app-titlebar .window-controls-container {
+    -webkit-app-region: no-drag;
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 138px;
+    display: flex;
+}
+
+.app-titlebar .window-controls-container .window-icon-bg {
+    display: inline-block;
+    -webkit-app-region: no-drag;
+    height: 100%;
+    width: 33.34%;
+}
+
+.app-titlebar .window-controls-container .window-icon-bg:hover {
+    background-color: var(--titlebar-ctrl-hover-bg);
+}
+
+.app-titlebar.inactive .window-controls-container .window-icon-bg .window-icon {
+    background-color: var(--titlebar-color-inactive);
+}
+
+.app-titlebar .window-controls-container .window-close-bg:hover {
+    background-color: var(--titlebar-ctrl-close-hover-bg);
+}
+.app-titlebar .window-controls-container .window-close-bg:hover .window-icon {
+    background-color: var(--titlebar-ctrl-close-hover-clr);
+}
+
+.app-titlebar .window-controls-container .window-icon-bg .window-icon {
+    background-color: var(--titlebar-color-active);
+    height: 100%;
+    width: 100%;
+    -webkit-mask-size: 23.1%;
+}
+
+.app-titlebar .window-controls-container .window-minimize {
+    -webkit-mask: url("icons/minimize.svg") no-repeat 50% 50%;
+}
+.app-titlebar .window-controls-container .window-maximize {
+    -webkit-mask: url("icons/maximize.svg") no-repeat 50% 50%;
+}
+.app-titlebar .window-controls-container .window-unmaximize {
+    -webkit-mask: url("icons/unmaximize.svg") no-repeat 50% 50%;
+}
+.app-titlebar .window-controls-container .window-close {
+    -webkit-mask: url("icons/close.svg") no-repeat 50% 50%;
+}
+
+/* App content */
+.app-content {
+    position: absolute;
+    top: 30px;
+    left: 0; right: 0; bottom: 0;
+    padding: 4px;
+}
+
+/* Fullscreen */
+body.fullscreen .app-titlebar {
+    display: none;
+}
+body.fullscreen .app-content {
+    top: 0;
+}
+
+/* Controls animation */
+.window-controls-container.anm .window-icon-bg {
+    transition: all .1s;
+}

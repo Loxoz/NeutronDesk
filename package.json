@@ -1,0 +1,24 @@
+{
+    "name": "neutrondesk",
+    "version": "1.0.0",
+    "description": "Customizable Windows 10 style for your Electrons Apps, Easy, Faster and Lightweight!",
+    "main": "index.js",
+    "scripts": {
+        "exemple": "electron exemple"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Loxoz/NeutronDesk.git"
+    },
+    "keywords": [
+        "window",
+        "electron",
+        "borderless"
+    ],
+    "author": "Loxoz",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Loxoz/NeutronDesk/issues"
+    },
+    "homepage": "https://github.com/Loxoz/NeutronDesk#readme"
+}

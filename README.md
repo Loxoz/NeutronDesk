@@ -48,9 +48,9 @@ You can add thoses css parameters to customize your current titlebar:
     --titlebar-ctrl-hover-bg: hsla(0,0%,100%,.1); /* background of a control icon on hover */
     --titlebar-ctrl-close-hover-bg: rgba(232,17,35,.9); /* background of the close control icon on hover */
     --titlebar-ctrl-close-hover-clr: #fff; /* color of the close control icon on hover */
-    /* Windows Style (not recommended to change) */
-    --titlebar-height: 30px; /* Default windows's titlebar height */
-    --titlebar-icon-size: 35px; /* Default windows's icon size */
+    /* Windows style (not recommended to change) */
+    --titlebar-height: 30px; /* Default windows titlebar height */
+    --titlebar-icon-size: 35px; /* Default windows titlebar icon size */
 }
 
 /* App content */

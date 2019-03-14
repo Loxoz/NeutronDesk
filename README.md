@@ -1,8 +1,8 @@
 # NeutronDesk
 ### Coming soon! (incomplete)
-> Lang: **EN** ~~[FR](README_FR.md)~~
+> Langs: **EN** [FR](README_FR.md)
 ## What is NeutronDesk?
-### It's a customizable Windows 10 style titlebar and behaviours for your Electrons Apps, Easy, Faster and Lightweight!
+### It's a customizable Windows 10 style window for your Electron Apps, Easy, Fast and Lightweight!
 ## First take in
 In your index.html, you have to include the style first on the head:
 ```html

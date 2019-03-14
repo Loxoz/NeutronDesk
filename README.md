@@ -59,7 +59,7 @@ You can add thoses css parameters to customize your current titlebar:
 }
 ```
 Remember: if you want to change the titlebar's title, just change the page's title `<title>Page title</title>`, and it's dynamically updated!
-### Buttons customization:
+### Configuration & Buttons customization:
 Coming soon.
 ## Documentation
 ~~[documentation page](https://github.com/Loxoz/EmitX/wiki)~~ (not avalible for the moment)

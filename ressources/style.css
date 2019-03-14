@@ -1,25 +1,44 @@
 /* blwindow default style */
 /* Default Theme */
 :root {
-    --titlebar-background-color: rgb(40, 44, 52); /* default: rgb(40, 44, 52) */
-    --titlebar-color-active: rgb(157, 165, 180); /* default: rgb(157, 165, 180) */
-    --titlebar-color-inactive: rgb(107, 113, 125); /* default: rgb(107, 113, 125) */
-    --titlebar-icon: url('../icon.svg'); /* default: url('../icon.svg') */
-    /* More */
-    --titlebar-font: -apple-system, BlinkMacSystemFont, Segoe WPC, Segoe UI, HelveticaNeue-Light, Ubuntu, Droid Sans, sans-serif;
-    --titlebar-font-size: 13px; /* default: 13px */
-    --titlebar-ctrl-hover-bg: hsla(0,0%,100%,.1); /* default: hsla(0,0%,100%,.1) */
-    --titlebar-ctrl-close-hover-bg: rgba(232,17,35,.9); /* default: rgba(232,17,35,.9) */
-    --titlebar-ctrl-close-hover-clr: #fff; /* default: #fff */
+    --titlebar-background-color: rgb(40, 44, 52); /* Titlebar background color */
+    --titlevar-background-color-inactive: var(--titlebar-background-color); /* Titlebar background color when focus lost (using same by default) */
+    --titlebar-color-active: rgb(157, 165, 180); /* Titlebar text and icons color */
+    --titlebar-color-inactive: rgb(107, 113, 125); /* Titlebar text and icons color when focus lost */
+    --titlebar-icon: url('../../icon.svg'); /* Your App's icon (default looking for a incon.svg in your parent folder (not in NeutronDesk)) */
+    /* InDepth */
+    --titlebar-font: -apple-system, BlinkMacSystemFont, Segoe WPC, Segoe UI, HelveticaNeue-Light, Ubuntu, Droid Sans, sans-serif; /* Titlebar's default font */
+    --titlebar-font-size: 13px; /* Titlebar's default font size */
+    --titlebar-ctrl-hover-bg: hsla(0,0%,100%,.1); /* background of a control icon on hover */
+    --titlebar-ctrl-close-hover-bg: rgba(232,17,35,.9); /* background of the close control icon on hover */
+    --titlebar-ctrl-close-hover-clr: #fff; /* color of the close control icon on hover */
+    /* Windows Style (not recommended to change) */
+    --titlebar-height: 30px; /* Default windows's titlebar height */
+    --titlebar-icon-size: 35px; /* Default windows's icon size */
 }
 /*
- * Note: if you want to edit the theme, it's recommended to copy the :root above and put in your style.css
+ * Note: if you want to edit the theme, it's recommended to copy the :root above and put in your style.css or ndstyle.css
  *  (and put your style import after this one)
+ * see here: https://github.com/Loxoz/NeutronDesk#customization
 */
 
+/* App content */
+.app-content {
+    position: absolute;
+    top: 30px;
+    left: 0; right: 0; bottom: 0;
+    padding: 4px;
+}
+
+/* Default style */
 body {
     margin: 0 !important;
     overflow: hidden;
+}
+
+* {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* App Title bar */
@@ -28,12 +47,12 @@ body {
     color: var(--titlebar-color-active);
     font-family: var(--titlebar-font);
     width: 100vw;
-    height: 30px;
+    height: var(--titlebar-height);
     top: 0; left: 0;
     display: flex;
     user-select: none;
     cursor: default;
-    line-height: 30px;
+    line-height: var(--titlebar-height);
     position: fixed;
     font-size: var(--titlebar-font-size);
     zoom: 1;
@@ -42,6 +61,7 @@ body {
 
 .app-titlebar.inactive {
     color: var(--titlebar-color-inactive);
+    background-color: var(--titlevar-background-color-inactive);
 }
 
 .app-titlebar .drag-region {
@@ -65,7 +85,7 @@ body {
 
 .app-titlebar .window-appicon {
     z-index: 100;
-    width: 35px;
+    width: var(--titlebar-icon-size);
     height: 100%;
     position: relative;
     background-image: var(--titlebar-icon);
@@ -135,14 +155,6 @@ body {
 }
 .app-titlebar .window-controls-container .window-close {
     -webkit-mask: url("icons/close.svg") no-repeat 50% 50%;
-}
-
-/* App content */
-.app-content {
-    position: absolute;
-    top: 30px;
-    left: 0; right: 0; bottom: 0;
-    padding: 4px;
 }
 
 /* Fullscreen */

@@ -25,7 +25,7 @@ Then create the titlebar container, app content and import your scripts:
 </body>
 ```
 ## Customization
-In your stylesheet or create a new one like so:
+In your stylesheet, the `ndstyle.css` put like so in the head:
 ```html
 <head>
     <link rel="stylesheet" href="NeutronDesk/ressources/style.css">

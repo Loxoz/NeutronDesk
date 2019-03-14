@@ -1,0 +1,23 @@
+{
+    "controls": {
+        "order": ["minimize", "maxrestore", "close"],
+        "items": {
+            "minimize": {
+                "class": "window-minimize",
+                "action": "minimize"
+            },
+            "maxrestore": {
+                "class": {
+                    "maximized": "window-unmaximize",
+                    "normal": "window-maximize"
+                },
+                "action": "maxrestore"
+            },
+            "close": {
+                "class": "window-close",
+                "action": "close"
+            }
+        }
+    },
+    "menubar": {}
+}

@@ -1,4 +1,10 @@
-/* blwindow default style */
+/**
+ * NeutronDesk's style
+ *  Customizable Windows 10 style for your Electrons Apps, Easy, Faster and Lightweight!
+ *  Github: https://github.com/Loxoz/NeutronDesk
+ *   by Loxoz
+**/
+
 /* Default Theme */
 :root {
     --titlebar-background-color: rgb(40, 44, 52); /* Titlebar background color */
@@ -120,6 +126,7 @@ body {
     -webkit-app-region: no-drag;
     height: 100%;
     width: 33.34%;
+    transition: all .1s;
 }
 
 .app-titlebar .window-controls-container .window-icon-bg:hover {
@@ -163,11 +170,6 @@ body.fullscreen .app-titlebar {
 }
 body.fullscreen .app-content {
     top: 0;
-}
-
-/* Controls animation */
-.window-controls-container.anm .window-icon-bg {
-    transition: all .1s;
 }
 
 /* Window size title support */
